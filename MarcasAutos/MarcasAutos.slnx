@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="../MarcasAutos.Tests/MarcasAutos.Tests.csproj" Id="37932d7c-9fcc-4a58-b50c-c0197ac2b903" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+  <Project Path="MarcasAutos/MarcasAutos.csproj" />
+</Solution>

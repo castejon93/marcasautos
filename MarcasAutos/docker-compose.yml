@@ -1,0 +1,24 @@
+services:
+  marcasautos.api:
+    image: ${DOCKER_REGISTRY-}marcasautos
+    container_name: marcasautos.api
+    build:
+      context: .
+      dockerfile: MarcasAutos/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+
+  marcasautos.db:
+    image: postgres:latest
+    container_name: marcasautos.db
+    environment:
+      - POSTGRES_DB=marcasautosdb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres123
+    volumes:
+      - ./.containers/postgres/data:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+
+    
