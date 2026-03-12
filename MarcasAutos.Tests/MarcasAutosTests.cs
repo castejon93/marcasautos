@@ -1,4 +1,4 @@
-using MarcasAutos.Models;
+using MarcasAutos.Data.Entities;
 using System.Net;
 using System.Net.Http.Json;
 

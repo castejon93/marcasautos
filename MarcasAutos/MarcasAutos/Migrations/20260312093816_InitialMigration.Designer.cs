@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MarcasAutos.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260310044849_MarcasAutosMigration")]
-    partial class MarcasAutosMigration
+    [Migration("20260312093816_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,7 @@ namespace MarcasAutos.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("MarcasAutos.Models.MarcaAuto", b =>
+            modelBuilder.Entity("MarcasAutos.Data.Entities.MarcaAuto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

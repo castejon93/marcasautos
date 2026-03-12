@@ -1,4 +1,4 @@
-﻿namespace MarcasAutos.Models
+﻿namespace MarcasAutos.Data.Entities
 {
     /// <summary>
     /// Represents a car brand stored in the database.

@@ -1,5 +1,5 @@
 ﻿using MarcasAutos.Data;
-using MarcasAutos.Models;
+using MarcasAutos.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

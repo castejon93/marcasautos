@@ -3,12 +3,12 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-#pragma warning disable CA1814
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
 namespace MarcasAutos.Migrations
 {
     /// <inheritdoc />
-    public partial class MarcasAutosMigration : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
