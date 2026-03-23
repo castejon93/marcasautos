@@ -419,3 +419,6 @@ FodyWeavers.xsd
 
 # docker
 /.containers/
+
+#test
+/coveragereport/

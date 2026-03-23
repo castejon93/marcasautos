@@ -14,14 +14,14 @@ services:
     image: postgres:latest
     container_name: marcasautos.db
     environment:
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres123}
-      - POSTGRES_USER=${POSTGRES_USER:-postgres}
-      - POSTGRES_DB=${POSTGRES_DB:-marcasautosdb}
-      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT:-Development}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT}
     volumes:
       - ./.containers/postgres/data:/var/lib/postgresql
     ports:
-      - "5432:5432"
+      - "5433:5432"
 
 
 

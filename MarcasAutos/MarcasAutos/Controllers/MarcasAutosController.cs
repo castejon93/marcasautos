@@ -15,13 +15,14 @@ namespace MarcasAutos.Controllers
         {
             _context = context;
         }
-            
+
         /// <summary>
         /// GET api/marcasautos
         /// Returns all car brands from the database.
         /// </summary>
         /// <returns>List of MarcaAuto objects.</returns>
         [HttpGet]
+        [ActionName("GetAll")]
         public async Task<ActionResult<IEnumerable<MarcaAuto>>> GetAll()
         {
             List<MarcaAuto> Brands = await _context.MarcasAutos.OrderBy(m => m.Name).ToListAsync();

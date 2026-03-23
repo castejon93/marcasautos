@@ -1,7 +1,18 @@
 <Solution>
-  <Project Path="../MarcasAutos.Tests/MarcasAutos.Tests.csproj" Id="37932d7c-9fcc-4a58-b50c-c0197ac2b903" />
-  <Project Path="docker-compose.dcproj">
-    <Build />
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="QA" />
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="../MarcasAutos.Tests/MarcasAutos.Tests.csproj" Id="37932d7c-9fcc-4a58-b50c-c0197ac2b903">
+    <BuildType Solution="Release|*" Project="QA" />
   </Project>
-  <Project Path="MarcasAutos/MarcasAutos.csproj" />
+  <Project Path="docker-compose.dcproj">
+    <BuildType Solution="Release|*" Project="QA" />
+    <Build Solution="Debug|*" />
+    <Build Solution="QA|*" />
+  </Project>
+  <Project Path="MarcasAutos/MarcasAutos.csproj">
+    <BuildType Solution="Release|*" Project="QA" />
+  </Project>
 </Solution>

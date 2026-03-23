@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using MarcasAutos.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace MarcasAutos.Tests
 {
@@ -15,6 +17,12 @@ namespace MarcasAutos.Tests
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
             return configBuilder.Build();
+        }
+
+        public AppDbContext GetInMemoryContext()
+        {
+            var options = new DbContextOptionsBuilder<AppDbContext>().UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()).Options;
+            return new AppDbContext(options); 
         }
     }
 }
